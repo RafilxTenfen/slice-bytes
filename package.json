@@ -1,18 +1,28 @@
 {
-  "name": "hardhat-project",
+  "name": "receive-bytes-smartcontract",
+  "version": "0.0.1",
   "engines": {
     "node": "16"
   },
   "scripts": {
-    "compile": "npx hardhat compile"
+    "ganache": "npx ganache-cli --quiet -i 6785 -v",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat deploy --network hardhat --verbose",
+    "deploy-ganache": "npx hardhat deploy --network development --verbose"
   },
   "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "chai": "^4.3.4",
-    "ethereum-waffle": "^3.4.0",
-    "ethers": "^5.4.6",
+    "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@0.3.0-beta.10",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.7.1",
+    "chai": "^4.2.0",
+    "ethers": "^5.4.5",
+    "ganache-cli": "^6.12.2",
     "hardhat": "^2.6.1",
-    "hardhat-gas-reporter": "^1.0.4"
+    "hardhat-deploy": "^0.9.0-next.0",
+    "hardhat-gas-reporter": "^1.0.4",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
   }
 }
